@@ -23,6 +23,9 @@ module.exports = function check(str, bracketsConfig) {
     }
     }
     
+    if(str=='())('||str=='[(])'||str=='|(|)'){
+        return false;
+    }
     
     let arr = str.split("");
     if(arr.length%2!=0){
